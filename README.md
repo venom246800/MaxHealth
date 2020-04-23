@@ -20,5 +20,6 @@ Our Project Stack is consist of **Mongodb, Express, Bootstrap, and Node JS**
 1. If it all went right you should see a message showing "server started at port 3000" and you will be able to run website from any web-browser.(link to website is "localhost:3000")
 
 ## Project Creators: ##
-This project is created with team of four members under the guidance of Dr. Anita Singhrova.
+This project is created with team of four members under the guidance of **Dr. Anita Singhrova.**
+
 Team Members : **Prashant Dhiman, Prateek Gupta, Rasesh Koul, Sahil**
