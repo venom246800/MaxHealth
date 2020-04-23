@@ -1,7 +1,7 @@
 # MaxHealth #
 ## Project Info : ##
 This Project is a Online Shopping Portal for Health Products and Fitness Equipments 
-as a health guide for betterment of your body. 
+as a health guide for betterment of our body. 
 
 ## Project Stack: ##
 Our Project Stack is consist of **Mongodb, Express, Bootstrap, and Node JS**
