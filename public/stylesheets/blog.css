@@ -1,0 +1,16 @@
+body {
+    background: linear-gradient(to right, #514A9D,#24C6DC);
+}
+
+.zoom{
+    transition: transform .3s;
+}
+
+.zoom:hover {
+    transition: transform .2s;
+    transform: scale(1.1);
+    -ms-transform: scale(1.1); /* IE 9 */
+    -webkit-transform: scale(1.1); /* Safari 3-8 */
+}
+
+

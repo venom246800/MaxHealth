@@ -1,0 +1,101 @@
+<%- include("./partials/headers/cdn.ejs") %>
+
+<link rel="stylesheet" href="/stylesheets/show.css">
+<title><%= foundProduct.name %></title>
+
+<%- include("./partials/headers/navbar.ejs") %>
+
+<div class="container">
+    <div class="row">
+
+        <div class="col-12 col-md-7 my-4 d-flex justify-content-center">
+            <img class="img-fluid rounded shadow zoom" src="<%= foundProduct.image %>">
+        </div>
+
+        <div class="col-11 col-md-5 my-5 py-3 mx-auto bg-white text-dark rounded shadow">
+
+            <div class="col-12 p-3">
+                <h2><%= foundProduct.name %></h2>
+                <hr class="bg-dark">
+                <p class="mb-0">Price per unit</p>
+                <h3>₹ <%= foundProduct.price %> only</h3>
+            </div>
+
+            <form action="/cart?_method=PUT" method="POST">
+
+                <input type="hidden" name="productId" value="<%= foundProduct.id %>">
+                <input type="hidden" name="productPrice" value="<%= foundProduct.price %>">
+
+                <div class="col-12 d-flex flex-row my-3">
+                    <h4 class="mr-3">Quantity:-</h4>
+                    <div class="form-group">
+                        <select class="form-control form-control-sm" id="sel1" name="selectQuantity">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                        </select>
+                    </div>
+                </div>
+
+
+                <div class="col-12">
+
+                    <button type="submit" class="btn btn-primary w-100 zoom"><span><i
+                                class="fa fa-shopping-cart"></i></span> Add to cart</button>
+                </div>
+            </form>
+
+        </div>
+
+
+        <% suggestedProducts.forEach(function(product, index){ %>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-2 my-4 zoom d-flex justify-content-around mx-auto">
+                <a href="/otc/<%= product.id %>" style="text-decoration:none">
+                    <div class="card text-center pt-3 border border-primary shadow" style="width: 10rem; height: 18rem;">
+                        <img id="productImg" src="<%= product.image %>" class="card-img-top mx-auto" alt="product image">
+                        <div class="card-body">
+                            <% if(product.name.length>20){ %>
+                            <% var smallName=product.name.substring(0,21)+"..."; %>
+                            <h5 class="card-title text-dark font-weight-light"><%= smallName %></h5>
+                            <% }else{ %>
+                            <h5 class="card-title text-dark font-weight-light"><%= product.name %></h5>
+                            <% } %>
+                        </div>
+                        <div class="card-footer bg-success text-white font-weight">₹ <%= product.price %> /-</div>
+                    </div>
+                </a>
+            </div>
+    
+            <% }); %>
+
+
+        <div class="col-12 my-5 mx-auto py-3 text-white border border-white shadow">
+            <h3><span><i class="far fa-file-alt"></i></span> Description</h3>
+
+            <hr class="bg-white">
+
+            <p class="text-white"><%= foundProduct.description.about %></p>
+
+            <% if(foundProduct.description.ingredients!=""){ %>
+            <h5><span><i class="fas fa-leaf"></i></span> Ingredients:-</h5>
+            <p><%= foundProduct.description.ingredients %></p>
+            <% } %>
+
+            <h5><span><i class="fas fa-check-circle"></i></span> Benefits:-</h5>
+            <p><%= foundProduct.description.benefits %></p>
+
+            <h5><span><i class="fas fa-cookie-bite"></i></span> Dosage:-</h5>
+            <p><%= foundProduct.description.dosage %></p>
+
+            <h5><span><i class="fas fa-temperature-low"></i></span> Storage:-</h5>
+            <p><%= foundProduct.description.storage %></p>
+
+            <h5><span><i class="fas fa-times-circle"></i></span> Safety:-</h5>
+            <p><%= foundProduct.description.safety %></p>
+        </div>
+
+    </div>
+</div>
+
+<%- include("./partials/footer.ejs") %>

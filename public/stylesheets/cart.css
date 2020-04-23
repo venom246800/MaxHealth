@@ -1,0 +1,9 @@
+body {
+    background: linear-gradient(to right, #514A9D, #24C6DC);
+}
+
+.my-footer-class{
+    position: fixed;
+    bottom:0;
+    width:100%;
+}

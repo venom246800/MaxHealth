@@ -1,0 +1,28 @@
+body {
+    background: linear-gradient(to right, #514A9D,#24C6DC);
+}
+
+.responsive-h3{
+    font-size: 2vw;
+}
+
+.responsive-h5{
+    font-size: 1.2vw;
+}
+
+#productImg{
+    height: 8rem;
+    width: auto;
+}
+
+.zoom{
+    transition: transform .3s;
+}
+
+.zoom:hover {
+    transition: transform .2s;
+    transform: scale(1.1);
+    -ms-transform: scale(1.1); /* IE 9 */
+    -webkit-transform: scale(1.1); /* Safari 3-8 */
+}
+
