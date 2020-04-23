@@ -1,13 +1,26 @@
 var express = require("express");
 var app = express();
 var port = process.env.PORT ||3000;
-require('dotenv').config()
+// require('dotenv').config()
+
 // MongoDB and mongoose
 var mongoose = require("mongoose");
-mongoose.connect(process.env.MONGODB_URI ||"mongodb://localhost/maxhealth", { useNewUrlParser: true, useUnifiedTopology: true });
-// mongoose.connect("mongodb+srv://sahil:mMfYcT1va5s0USIp@cluster0-b5tqv.mongodb.net/test", { useNewUrlParser: true, useUnifiedTopology: true });
+// mongoose.connect(process.env.MONGODB_URI ||"mongodb://localhost/maxhealth", { useNewUrlParser: true, useUnifiedTopology: true });
+// YjYH8gb2gDpuuXd7
+// mongoose.connect("mongodb+srv://prashant:YjYH8gb2gDpuuXd7@cluster0-b5tqv.mongodb.net/test?retryWrites=true&w=majority", { useNewUrlParser: true, useUnifiedTopology: true });
+
+mongoose.connect("mongodb+srv://sahil:h7g7km3SPEGnWga@cluster0-b5tqv.mongodb.net/test?retryWrites=true&w=majority", { useNewUrlParser: true, useUnifiedTopology: true });
 // mongodb+srv://sahil:<password>@cluster0-b5tqv.mongodb.net/test?retryWrites=true&w=majority
 // mongodb+srv://sahil:<password>@cluster0-b5tqv.mongodb.net/test
+
+// const MongoClient = require('mongodb').MongoClient;
+// const uri = "mongodb+srv://sahil:h7g7km3SPEGnWga@cluster0-b5tqv.mongodb.net/test?retryWrites=true&w=majority";
+// const client = new MongoClient(uri, { useNewUrlParser: true });
+// client.connect(err => {
+//   const collection = client.db("test").collection("devices");
+//   // perform actions on the collection object
+//   client.close();
+// });
 
 // Body-parser
 var bodyParser = require("body-parser");
