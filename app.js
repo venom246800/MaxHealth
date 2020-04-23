@@ -1,11 +1,11 @@
 var express = require("express");
 var app = express();
-var port = 3000;
-
+var port = process.env.PORT ||3000;
+require('dotenv').config()
 // MongoDB and mongoose
 var mongoose = require("mongoose");
-// mongoose.connect("mongodb://localhost/maxhealth", { useNewUrlParser: true, useUnifiedTopology: true });
-mongoose.connect("mongodb+srv://sahil:mMfYcT1va5s0USIp@cluster0-b5tqv.mongodb.net/test", { useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connect(process.env.MONGODB_URI ||"mongodb://localhost/maxhealth", { useNewUrlParser: true, useUnifiedTopology: true });
+// mongoose.connect("mongodb+srv://sahil:mMfYcT1va5s0USIp@cluster0-b5tqv.mongodb.net/test", { useNewUrlParser: true, useUnifiedTopology: true });
 // mongodb+srv://sahil:<password>@cluster0-b5tqv.mongodb.net/test?retryWrites=true&w=majority
 // mongodb+srv://sahil:<password>@cluster0-b5tqv.mongodb.net/test
 
