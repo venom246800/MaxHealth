@@ -1,6 +1,6 @@
 # MaxHealth #
 ## Project Info : ##
-This Project is a Shopping App for Health Products and Fitness Equipments 
+This Project is a Online Shopping Portal for Health Products and Fitness Equipments 
 as a health guide for betterment of your body. 
 
 ## Project Stack: ##
