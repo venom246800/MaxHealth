@@ -9,10 +9,8 @@ Our Project Stack is consist of **Mongodb, Express, Bootstrap, and Node JS**
 ## How to Run this Project: ##
 1. First extract it any given folder on your pc.
 1. You have to install npm/node and mongo to your computer and add them into path variable.
-    * To check if they are installed properly and added to path variable run following commands
-        
+   (To check if they are installed properly and added to path variable run following commands)
         "npm -v"(it should provide you with the version of npm you have installed)
-        
         "mongo"(it will switch to listen to mongodb commands)
 1. Then install all the npm packages included in the project using command "npm install" in project folder.(It'll create a node_modules folder in directory.)
 1. Now run mongodb server in a Fresh/New terminal(cmd) usind command "mongodb".
